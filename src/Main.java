@@ -1,5 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        DayOfWeek[] values = DayOfWeek.values();
+
+        for (DayOfWeek dayOfWeek : values) {
+
+            if (dayOfWeek.getNumber() == 2) {
+                System.out.println(dayOfWeek);
+            }
+        }
     }
 }
