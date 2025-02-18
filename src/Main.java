@@ -2,10 +2,13 @@ public class Main {
     public static void main(String[] args) {
         DayOfWeek[] values = DayOfWeek.values();
 
-        for (DayOfWeek dayOfWeek : values) {
+        getDayOfWeekByNumber(values, 7);
+    }
 
-            if (dayOfWeek.getNumber() == 2) {
-                System.out.println(dayOfWeek);
+    private static void getDayOfWeekByNumber(DayOfWeek[] values, int number) {
+        for (DayOfWeek dayOfWeek : values) {
+            if (dayOfWeek.getNumber() == number) {
+                System.out.println(number + ". " + dayOfWeek.name());
             }
         }
     }
