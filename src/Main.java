@@ -2,14 +2,16 @@ public class Main {
     public static void main(String[] args) {
         DayOfWeek[] values = DayOfWeek.values();
 
-        getDayOfWeekByNumber(values, 7);
+        DayOfWeek dayOfWeekByNumber = getDayOfWeekByNumber(values, 7);
+        System.out.println(dayOfWeekByNumber);
     }
 
-    private static void getDayOfWeekByNumber(DayOfWeek[] values, int number) {
-        for (DayOfWeek dayOfWeek : values) {
-            if (dayOfWeek.getNumber() == number) {
-                System.out.println(number + ". " + dayOfWeek.name());
+    private static DayOfWeek getDayOfWeekByNumber(DayOfWeek[] values, int number) {
+        for (DayOfWeek day : values) {
+            if (day.getNumber() == number) {
+                return day;
             }
         }
+        return null;
     }
 }
